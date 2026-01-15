@@ -13,13 +13,13 @@ Garante que tudo que você ler será, no mínimo, do tipo `T` (ou uma subclasse)
 
 Listas de Integer, Double, etc, tratadas como Number:
 
-```
+```java
 List<? extends Number> numeros; // Integer, Double, etc
 ```
 
 Quando o método consome dados de uma hierarquia:
 
-```
+```java
 double somar(List<? extends Number> numeros) {
     double total = 0;
     for (Number n : numeros) {
