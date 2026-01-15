@@ -1,4 +1,4 @@
-# 🃏WildcardsTypes em Java - `? extends T`
+# 🃏 WildcardsTypes em Java — `? extends T`
 
 ### ❓O que é:
 
@@ -29,9 +29,19 @@ double somar(List<? extends Number> numeros) {
 }
 ```
 
-## Resumo 
+### 📌 Resumo
 
 - Aceita `T` ou qualquer subclasse de `T`
 - Você pode ler como `T`
 - Não pode adicionar valores
 - Ideal quando você só consome dados
+
+### ⚔️ `? extends T` vs outros wildcards
+
+| Característica      | `? extends T`        | `? super T`           | `?`                  |
+|--------------------|----------------------|-----------------------|----------------------|
+| Pode ler           | ✅ Sim (como `T`)     | ✅ Sim (Object)        | ✅ Sim (Object)       |
+| Pode adicionar     | ❌ Não               | ✅ Sim (`T`)           | ❌ Não                |
+| Foco               | Leitura              | Escrita               | Leitura genérica      |
+| Hierarquia         | Subclasses de `T`     | Superclasses de `T`   | Qualquer tipo         |
+| Quando usar        | Consome dados         | Produz dados          | Tipo irrelevante      |
